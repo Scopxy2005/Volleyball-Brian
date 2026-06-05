@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using VolleyPool.ConsoleApp.Helpers;
-using VolleyPool.Core.Models;
 using VolleyPool.Core.Services;
 using VolleyPool.Data.Repostories;
 
