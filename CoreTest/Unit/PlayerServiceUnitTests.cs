@@ -37,7 +37,7 @@ namespace CoreTest.Unit
         [Test]
         public void AddPlayer_WithValidData_ReturnsPlayer()
         {
-            var playerWithValidData = new Player { Name = "Theo", Surname = "Thijssen", BirthDate = DateTime.Now, MemberId = -1 };
+            var playerWithValidData = new Player { Name = "Theo", BirthDate = DateTime.Now, MemberId = -1 };
             var result = playerService.Add(playerWithValidData);
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Name, Is.EqualTo("Theo"));
@@ -49,8 +49,6 @@ namespace CoreTest.Unit
         {
             var playerWithInvalidData = new Player {
                 Name = "Johan",
-                Surname = "Nienhuis",
-                //In the future
                 BirthDate = DateTime.Now.AddDays(1),
                 MemberId = -1
             };

@@ -9,7 +9,7 @@ namespace VolleyPool.Data.Repostories
             new Parent { Name = "Piet", Email = "piet@odido.nl", Phone = "06-25364829", Password = "hetregentbuiten", PlayerMemberId = 1},
             new Parent { Name = "Jolanda", Email = "jolanda@gmail.com", Phone = "+316-53486753", Password = "jolandasportopdecampus", PlayerMemberId = 2},
             new Parent { Name = "Jaap", Email = "jaap@volley-pool.com", Phone = "+316-53486763", Password = "jaapiseenwandelaar", PlayerMemberId = 2}
-            // Currently the password are stored as plain text. This is bad practice and very dangerous. Use hashing instead.
+            // Currently the password is stored as plain text. This is bad practice and very dangerous. Use hashing instead.
 
         ];
 

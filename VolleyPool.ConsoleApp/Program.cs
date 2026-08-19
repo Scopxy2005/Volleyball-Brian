@@ -74,8 +74,8 @@ while (!quit)
 string ShowMenu()
 { 
     Console.WriteLine("Wat wil je doen?");
-    Console.WriteLine("Voer 1 in om te registreren");
-    Console.WriteLine("Voer 2 in om te stoppen");
+    Console.WriteLine("Toets 1 om te registreren als ouder");
+    Console.WriteLine("Toets 2 om te stoppen");
 
     var menuChoice = Console.ReadLine();
 
@@ -101,11 +101,11 @@ void StopApplication(string menuChoice)
 
 
 ////////////////////////////////////////////////////////////////////////
-// Register
+// Register as a parent
 ////////////////////////////////////////////////////////////////////////
 void ShowRegister() {
 
-    consolePrinter.PrintBlock("Registreer ouder"); // Use Ctrl + Left Click to view implementation details.
+    consolePrinter.PrintBlock("Registreer als ouder"); // Use Ctrl + Left Click to view implementation details.
 
     // For the sake of simplicity this is a linear flow. What a pity if
     // it fails, the program exits and the user should start the whole
@@ -117,7 +117,7 @@ void ShowRegister() {
     // This code contains a lot of duplicated code. This could be improved
     // by creating a helper like this:
     // CollectUserInput("Enter player id"). It returns the collected value.
-    Console.WriteLine("Voer speler ID in");
+    Console.WriteLine("Voer lidnummer van de speler in");
     var playerId = Console.ReadLine();
     Console.WriteLine("Voer de geboortedatum van de speler in. Je zou die datum moeten weten!. Voorbeeld 21-1-2000");
     var playerBirthDateString = Console.ReadLine();

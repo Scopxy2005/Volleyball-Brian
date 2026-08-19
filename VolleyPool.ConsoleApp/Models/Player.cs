@@ -9,11 +9,9 @@ namespace VolleyPool.Core.Models
     {
         public int MemberId;
         public string Name;
-        public string? Surname; //sprint-3-uc1-invoeren-speler
         public DateTime BirthDate;
         public string? ParentOneId;
         public string? ParentTwoId;
-        public int[] CancellationIds = [];
 
         // For the sake of simplicity, the fields of the Player class have been implemented as public fields instead of properties.
         // This is considered bad practice in C#. When fields are public, the class loses control over how values are validated, accessed,

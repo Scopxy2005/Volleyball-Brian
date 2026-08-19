@@ -24,4 +24,8 @@
     <Folder Include="Integration\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VolleyPool.ConsoleApp\VolleyPool.ConsoleApp.csproj" />
+  </ItemGroup>
+
 </Project>

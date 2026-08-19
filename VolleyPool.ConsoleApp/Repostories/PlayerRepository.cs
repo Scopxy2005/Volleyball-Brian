@@ -55,7 +55,6 @@ namespace VolleyPool.Data.Repostories
             entity.BirthDate = player.BirthDate;
             entity.ParentOneId = player.ParentOneId;
             entity.ParentTwoId = player.ParentTwoId;
-            entity.CancellationIds = player.CancellationIds;
             return player;
         }
     }
