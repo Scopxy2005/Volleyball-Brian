@@ -1,13 +1,13 @@
-User story: Als ... wil ik ... zodat ...
+## User story
+Als ... wil ik ... zodat ...
 
-Acceptatiecriteria:
+## Acceptatiecriteria
 1. ...
 2. ...
 
+## Layout
 
-Layout:
-
-Opmerkingen:
+## Opmerkingen
 
 ## Definition of done  
 
@@ -19,3 +19,5 @@ Opmerkingen:
 - [ ] Integratietests (indien van toepassing) geslaagd  
 - [ ] Functionele tests uitgevoerd en akkoord  
 - [ ] Geen regressie in bestaande functionaliteit  
+~~Sprint 3:- [ ] Integratietests (indien van toepassing) geslaagd~~    
+~~Periode 2: - [ ] Functionele tests uitgevoerd en akkoord~~ 
