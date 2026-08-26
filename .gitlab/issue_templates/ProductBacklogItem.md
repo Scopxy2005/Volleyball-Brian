@@ -9,6 +9,9 @@ Als ... wil ik ... zodat ...
 
 ## Opmerkingen
 
+## Extra taken  
+- [ ] ...
+
 ## Definition of done  
 
 - [ ] Code is volledig geïmplementeerd volgens de acceptatiecriteria  
