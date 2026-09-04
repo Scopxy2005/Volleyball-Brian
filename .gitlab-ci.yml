@@ -1,6 +1,8 @@
 stages:
   - build
   - test
+  - publish
+  - release
 
 default:
   image: mcr.microsoft.com/dotnet/sdk:10.0
@@ -26,3 +28,34 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
+
+publish:
+  stage: publish
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  script:
+    - dotnet publish --configuration Release --artifacts-path "$CI_PROJECT_DIR/dotnet-artifacts"
+    - tar -czf "release-${CI_COMMIT_TAG}.tar.gz" -C "$CI_PROJECT_DIR/dotnet-artifacts/publish" .
+  artifacts:
+    name: "release-$CI_COMMIT_TAG"
+    paths:
+      - "release-${CI_COMMIT_TAG}.tar.gz"
+    expire_in: 1 week
+
+create_release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/cli:latest
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  needs:
+    - job: publish
+      artifacts: true
+  variables:
+    GLAB_ENABLE_CI_AUTOLOGIN: "true"
+  script:
+    - |
+      glab release create "$CI_COMMIT_TAG" \
+        --name "Release $CI_COMMIT_TAG" \
+        --notes "Automatische release gegenereerd vanuit de CI/CD pipeline voor tag $CI_COMMIT_TAG." \
+        "release-${CI_COMMIT_TAG}.tar.gz#Applicatie ${CI_COMMIT_TAG}#package" \
+        --use-package-registry
