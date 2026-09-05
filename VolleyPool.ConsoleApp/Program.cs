@@ -26,6 +26,7 @@ var consolePrinter = new ConsolePrinter();
 ////////////////////////////////////////////////////////////////////////
 Console.WriteLine("Welkom bij Volleypool, vervoer je kind's team als een raketjeEEE");
 Console.WriteLine("Test desktop");
+Console.WriteLine("Test laten zien Jan");
 
 ////////////////////////////////////////////////////////////////////////
 // Runner loop
