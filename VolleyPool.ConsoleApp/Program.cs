@@ -24,7 +24,11 @@ var consolePrinter = new ConsolePrinter();
 ////////////////////////////////////////////////////////////////////////
 // Welcome message
 ////////////////////////////////////////////////////////////////////////
-Console.WriteLine("Welkom bij Volleypool, vervoer je kind's team als een raketjee");
+Console.WriteLine("Welkom bij Volleypool, vervoer je kind's team als een raketjeEEE");
+Console.WriteLine("Test desktop");
+Console.WriteLine("test pipeline34");
+Console.WriteLine("test pipeline55");
+
 
 
 ////////////////////////////////////////////////////////////////////////
